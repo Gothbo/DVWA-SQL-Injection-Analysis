@@ -38,7 +38,7 @@
 
 | 面试官问 | 打开这个案例 |
 |---------|-------------|
-| "你在零售行业有什么经验？" | [零售攻击溯源](Case-Study/examples/Retail-company-attack%20-attribution.md) |
+| "你在零售行业有什么经验？" | [零售攻击溯源](Case-Study/examples/Retail-company-attack-attribution.md) |
 | "你在教育行业有什么经验？" | [教育API泄露](Case-Study/examples/Online-education-system.md) |
 | "你在金融行业有什么经验？" | [金融数据合规](Case-Study/examples/Bank-data-security-compliance.md) |
 | "你在医疗行业有什么经验？" | [医疗核心系统安全](Case-Study/examples/Core-system-security-of-tertial-hospitals.md) |
