@@ -1,157 +1,180 @@
-# Web Security & Pre-Sales Solution Lab
+# 网络安全售前工程师实战手册
 
-![Status](https://img.shields.io/badge/Status-In--Progress-orange)
-![Focus](https://img.shields.io/badge/Focus-Cybersecurity%20%7C%20Pre--Sales-blue)
-![Platform](https://img.shields.io/badge/Platform-DVWA-red)
-![License](https://img.shields.io/badge/License-Educational-green)
-
-A hands-on **web security attack & defense** training repository with a **pre-sales solution** perspective. By exploiting real vulnerabilities in DVWA, each module translates low-level injection techniques into deliverable business security proposals.
+> 一套从入门到面试的完整售前安全工程师学习资料，基于真实场景和方法论沉淀。
 
 ---
 
-## Project Structure
+## 快速导航
+
+| 你想了解 | 直接跳转 |
+|----------|---------|
+| 我是新手，怎么系统学习？ | [30天速成计划](casestudy/30-day-plan.md) |
+| 想练习售前对话 | [AI模拟器](skills/domain/security-pre-sales-simulator/SKILL.md) |
+| 想直接看案例 | [案例集合](#-案例学习) |
+| 想找方法论 | [方法论速查](#-方法论) |
+| 准备面试 | [面试题库](售前安全工程师面试题库.md) |
+
+---
+
+## 这是什么
+
+这是一个为**网络安全售前工程师**设计的实战学习手册，内容涵盖：
+
+- **基础知识**：合规法规、安全产品、云安全架构
+- **方法论**：客户询问技巧、方案匹配逻辑、案例引用方法
+- **案例学习**：覆盖零售、教育、金融、医疗、政府、制造6大行业
+- **面试准备**：题库 + AI模拟器实战练习
+
+**核心理念**：售前不是卖产品清单，而是帮客户理清问题，再给对应的解法。
+
+---
+
+## 案例学习
+
+### 已完成案例（6个）
+
+| 行业 | 案例名称 | 核心问题 | 方案亮点 |
+|------|---------|---------|---------|
+| 零售 | [攻击溯源案例](售前案例学习_零售公司攻击溯源.md) | 设备买了但看不清攻击路径 | 三天出溯源报告 |
+| 教育 | [API数据泄露案例](售前案例学习_在线教育API数据泄露.md) | 测试接口没鉴权泄露30万数据 | 先止血再排查 |
+| 金融 | [城商行数据合规案例](售前案例学习_城商行数据安全合规.md) | 监管整改通知，数据分类分级不清 | 合规驱动+总分行一体化 |
+| 医疗 | [三甲医院安全案例](售前案例学习_三甲医院核心系统安全.md) | 勒索攻击导致挂号中断2小时 | 业务不中断+防勒索 |
+| 政府 | [政务云安全升级案例](售前案例学习_政务云平台安全升级.md) | 80个委办局安全水平参差不齐 | 管理平台+排名通报 |
+| 制造 | [汽车零部件工控安全案例](售前案例学习_汽车零部件工控安全.md) | PLC被篡改，2000件产品报废 | 旁路部署+IT/OT一体化 |
+
+### 案例模板
+
+所有案例均按统一模板编写，包含：
+1. 基础信息
+2. 客户背景
+3. 痛点分析（表面诉求→深层痛点→技术需求）
+4. 解决方案
+5. 量化成果
+6. 可复用的面试话术
+7. 个人思考
+
+📄 [案例学习模板](casestudy/templates/case-study-template.md)
+
+---
+
+## 方法论
+
+### 核心框架
+
+| 框架 | 说明 | 适用场景 |
+|------|------|---------|
+| [四维追问框架](售前追问四维框架.md) | 环境、时间、资产、预算四个维度的追问逻辑 | 所有售前对话 |
+| [场景化询问顺序](售前询问顺序按场景灵活调整.md) | 危机/常规/探索三种场景的不同询问节奏 | 根据客户状态灵活调整 |
+| [案例引用四法](售前案例引用四法.md) | 模糊化、组合用、坦诚查、行业数据 | 讲案例时不编造 |
+
+### 售前五步法
 
 ```
-Web-Security-PreSales-Lab/
-│
-├── SQL-Injection/                         # SQL Injection Lab
-│   ├── README.md                          # Module overview & pre-sales summary
-│   ├── DVWA-SQL-Injection.pdf             # Full penetration testing report
-│   └── payloads.sql                       # Payload reference handbook
-│
-├── XSS/                                   # Cross-Site Scripting Lab
-│   ├── README.md                          # XSS overview & navigation
-│   ├── Reflect-XSS/                       # Reflected XSS module
-│   │   ├── README.md                      # Technical walkthrough (Low/Med/High)
-│   │   └── DVWA Reflected XSS ...pdf      # Penetration testing report
-│   ├── STORE-XSS/                         # Stored XSS module
-│   │   ├── README.md                      # Technical walkthrough (Low/Med/High)
-│   │   └── DVWA Stored XSS ...pdf         # Penetration testing report
-│   └── DOM-XSS/                           # DOM Based XSS module
-│       ├── README.md                      # Technical walkthrough (Low/Med/High)
-│       └── DVWA DOM Based XSS ...pdf      # Penetration testing report
-│
-├── CSRF/                                  # Cross-Site Request Forgery Lab
-│   └── README.md                          # Defense strategies & experiments
-│
-├── Case-Study/                            # Industry Case Studies (Pre-Sales)
-│   └── README.md                          # Business scenario analysis
-│
-└── README.md                              # ← You are here
+1. 痛点翻译 → 2. 共情锚定 → 3. 方案匹配 → 4. 案例举证 → 5. 反问引导
 ```
 
----
-
-## Module Roadmap
-
-Each module covers: **source code audit** | **payload exploitation** | **business impact analysis** | **pre-sales remediation advice**
-
-### 1. [SQL Injection](./SQL-Injection/)
-
-> **Status: Completed**
-
-- Numeric & string-based injection, Hex encoding bypass, Collation conflict resolution
-- Deliverables: Full penetration testing report (PDF), payload script library
-
-### 2. [XSS (Cross-Site Scripting)](./XSS/)
-
-> **Status: Completed**
-
-Three sub-modules covering the full XSS attack surface:
-
-| Sub-Module | Key Technique | Bypass Highlights |
-|-----------|--------------|-------------------|
-| [Reflected XSS](./XSS/Reflect-XSS/) | URL parameter injection | Case manipulation, nested tags, alternative event handlers |
-| [Stored XSS](./XSS/STORE-XSS/) | Persistent payload in DB | `maxlength` bypass, field-level defense gap ("barrel effect") |
-| [DOM Based XSS](./XSS/DOM-XSS/) | Client-side DOM manipulation | `</select>` tag closure, `#` fragment bypass (invisible to server) |
-
-**Pre-Sales Perspective:**
-- How to explain CSP (Content Security Policy) and output encoding to non-technical stakeholders
-- Why WAF alone cannot defend against DOM XSS
-- Business risk quantification: cookie theft → account takeover → data breach
-
-### 3. [CSRF (Cross-Site Request Forgery)](./CSRF/)
-
-> **Status: Planned**
-
-- Exploiting authenticated sessions to perform unauthorized actions
-- Business scenarios: unauthorized fund transfers, admin configuration changes
-- Pre-Sales focus: Token mechanisms and `SameSite` cookie attribute
-
-### 4. [Case Study (Industry Scenarios)](./Case-Study/)
-
-> **Status: In Progress**
-
-- Mapping lab techniques to real-world business environments (e-commerce, OA systems, etc.)
-- Practice articulating security risks to non-technical clients and decision-makers
+详细操作指南见 [AI模拟器使用说明](skills/domain/security-pre-sales-simulator/USAGE-DEMO.md)
 
 ---
 
-## Vulnerability Coverage Matrix
+## 基础知识
 
-| Vulnerability | DVWA Low | DVWA Medium | DVWA High | Report | Pre-Sales Analysis |
-|:---:|:---:|:---:|:---:|:---:|:---:|
-| SQL Injection | Done | Done | Done | PDF | Included |
-| Reflected XSS | Done | Done | Done | PDF | Included |
-| Stored XSS | Done | Done | Done | PDF | Included |
-| DOM Based XSS | Done | Done | Done | PDF | Included |
-| CSRF | - | - | - | - | Planned |
+| 模块 | 内容 | 适合 |
+|------|------|------|
+| [合规与法规](casestudy/compliance-and-regulations.md) | 一法三条例、等保体系、行业合规要求 | 了解"为什么客户要买安全" |
+| [安全产品指南](casestudy/security-products-guide.md) | 8大核心产品的通俗解释 | 学会"用客户听得懂的话讲产品" |
+| [云安全架构](casestudy/cloud-security-and-architecture.md) | 云上三大件、云安全产品、架构设计 | 理解"云上和机房的区别" |
 
 ---
 
-## Toolbox
+## 面试准备
 
-| Category | Tool | Purpose |
-|----------|------|---------|
-| Target Platform | [DVWA](https://github.com/digininja/DVWA) | Deliberately vulnerable web application |
-| Web Environment | phpStudy (WAMP) | PHP + MySQL + Apache runtime |
-| Proxy & Intercept | Burp Suite | HTTP traffic interception & request tampering |
-| Browser | Chrome / Firefox DevTools (F12) | DOM inspection, `maxlength` bypass, network analysis |
-| Documentation | Markdown + PDF | Professional report formatting |
+### 题库
+
+- [面试题库（Markdown版）](售前安全工程师面试题库.md) — 完整题库，支持搜索
+- [面试题库（Word版）](售前安全工程师面试题库.docx) — 方便打印
+
+### 实战练习
+
+1. **AI模拟器** — 在终端运行 `hermes` 进入角色扮演模式，模拟真实客户对话
+2. **案例演练** — 从6个案例中选一个，用面试话术部分练习表达
+
+### 学习计划
+
+- [30天速成计划](casestudy/30-day-plan.md) — 从零到能独立面对客户
 
 ---
 
-## Getting Started
+## 资源收集
 
-```bash
-# 1. Clone the repository
-git clone https://github.com/Gothbo/Web-Security-PreSales-Lab.git
+不知道从哪里找真实案例？
 
-# 2. Set up DVWA on your local environment (phpStudy recommended)
+📄 [案例资源收集指南](casestudy/resource-guide.md)
 
-# 3. Pick a module and start training
-#    Recommended order: SQL Injection → XSS → CSRF
-```
+---
 
-**Suggested Learning Path:**
+## 项目结构
 
 ```
-SQL Injection (foundation — understand server-side injection)
-      ↓
-Reflected XSS (URL-based script injection)
-      ↓
-Stored XSS (persistent attacks, field-level defense gaps)
-      ↓
-DOM Based XSS (client-side attacks, # fragment bypass)
-      ↓
-CSRF (session-based attacks)
-      ↓
-Case Study (translate techniques into business proposals)
+├── README.md                     # 本文件
+├── INDEX.md                      # 全局索引（建设中）
+├── 售前安全工程师面试题库.md      # 面试题库
+├── 售前案例学习_*.md             # 案例学习笔记（6个）
+├── 售前追问四维框架.md            # 方法论
+├── 售前询问顺序按场景灵活调整.md  # 方法论
+├── 售前案例引用四法.md            # 方法论
+├── casestudy/                    # 案例学习目录
+│   ├── 30-day-plan.md            # 30天学习计划
+│   ├── compliance-and-regulations.md
+│   ├── security-products-guide.md
+│   ├── cloud-security-and-architecture.md
+│   ├── resource-guide.md
+│   ├── templates/
+│   └── examples/
+└── skills/                       # AI模拟器
+    └── domain/
+        └── security-pre-sales-simulator/
 ```
 
 ---
 
-## Disclaimer
+## 学习路线图
 
-All content in this repository is for **authorized security training and educational purposes only**. All tests were conducted on local DVWA instances. Do not use these techniques against any system without explicit written authorization. Unauthorized access to computer systems is illegal.
+```
+第1步：打基础
+  ├─ 读《合规与法规》→ 理解客户为什么要买安全
+  ├─ 读《安全产品指南》→ 学会通俗讲产品
+  └─ 读《云安全架构》→ 理解云和机房的区别
+
+第2步：学方法
+  ├─ 读《四维追问框架》→ 学会问对问题
+  ├─ 读《场景化询问顺序》→ 学会灵活调整
+  └─ 读《案例引用四法》→ 学会讲好案例
+
+第3步：看案例
+  ├─ 精读2-3个同行业案例
+  ├─ 练习面试话术部分
+  └─ 记录自己的思考
+
+第4步：练实战
+  ├─ 用AI模拟器练习对话
+  ├─ 模拟面试场景
+  └─ 反复打磨表达方式
+
+第5步：去面试
+  ├─ 刷面试题库
+  ├─ 准备1-2个拿手案例
+  ─ 自信上场
+```
 
 ---
 
-## References
+## 版本信息
 
-- [DVWA Official Repository](https://github.com/digininja/DVWA)
-- [OWASP Top 10](https://owasp.org/www-project-top-ten/)
-- [OWASP XSS Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Scripting_Prevention_Cheat_Sheet.html)
-- [OWASP SQL Injection Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html)
-- [CWE-79: XSS](https://cwe.mitre.org/data/definitions/79.html)
-- [CWE-89: SQL Injection](https://cwe.mitre.org/data/definitions/89.html)
+| 版本 | 日期 | 更新内容 |
+|------|------|---------|
+| v0.1 | 2026-05 | 初始版本，包含6个案例 + 3个方法论 + 基础知识 |
+
+---
+
+> 本项目持续更新中，欢迎通过 GitHub Issues 提交建议或贡献案例。
