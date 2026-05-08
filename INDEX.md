@@ -14,7 +14,7 @@
 | 不同客户怎么应对 | [场景化询问顺序](售前询问顺序按场景灵活调整.md) |
 | 怎么讲案例不编造 | [案例引用四法](售前案例引用四法.md) |
 | 售前对话完整流程 | [AI模拟器SKILL.md](skills/domain/security-pre-sales-simulator/SKILL.md) |
-| Web漏洞与售前关联 | [Web安全技术关联指南](Web安全技术与售前场景关联.md) |
+| Web漏洞与售前关联 | [Web安全技术关联指南](casestudy/Web安全技术与售前场景关联.md) |
 
 ### 基础知识
 
