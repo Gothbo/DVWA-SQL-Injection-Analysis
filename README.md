@@ -8,7 +8,7 @@
 
 | 你想了解 | 直接跳转 |
 |----------|---------|
-| 我是新手，怎么系统学习？ | [30天速成计划](Case-Study/Learning-materials/30-day-plan.md) |
+| 我是新手，怎么系统学习？ | [三十天速成计划](Case-Study/Learning-materials/三十天计划.md) |
 | 想直接看案例 | [案例集合](#案例学习) |
 | 想找方法论 | [方法论速查](#方法论) |
 | 准备面试 | [面试题库](Case-Study/Learning-materials/售前安全工程师面试题库.pdf) |
@@ -20,7 +20,7 @@
 
 这是一个为**网络安全售前工程师**设计的实战学习手册，内容涵盖：
 
-- **基础知识**：合规法规、安全产品、云安全架构、Web漏洞实战(XSS/SQL注入/CSRF)
+- **基础知识**：法规合规指南、安全产品、云安全架构、Web漏洞实战(XSS/SQL注入/CSRF)
 - **方法论**：客户询问技巧、方案匹配逻辑、案例引用方法
 - **案例学习**：覆盖零售、教育、金融、医疗、政府、制造6大行业
 - **面试准备**：题库 + 实战练习
@@ -30,8 +30,7 @@
 > **全部内容均为本人独立整理创作** — 从行业案例的方法论沉淀、
 > 到Web安全技术的实战演示、再到产品与场景的映射分析，
 > 全部基于公开资料和个人实践经验编写。
-> 每个案例末尾（或痛点分析之后）附有我的个人复盘和思考,
-> 有不够好的地方请见谅！
+> 每个案例的「我的思考」部分展示了我对行业需求的复盘和推演过程。
 
 ---
 
@@ -41,12 +40,12 @@
 
 | 行业 | 案例名称 | 核心问题 | 方案亮点 |
 |------|---------|---------|---------|
-| 零售 | [攻击溯源案例](Case-Study/examples/Retail-Company-Attack%20-Attribution.md) | 设备买了但看不清攻击路径 | 三天出溯源报告 |
+| 零售 | [攻击溯源案例](Case-Study/examples/Retail-company-attack%20-attribution.md) | 设备买了但看不清攻击路径 | 三天出溯源报告 |
 | 教育 | [API数据泄露案例](Case-Study/examples/Online-education-system.md) | 测试接口没鉴权泄露30万数据 | 先止血再排查 |
-| 金融 | [城商行数据合规案例](Case-Study/examples/Bank%20data%20security%20compliance.md) | 监管整改通知，数据分类分级不清 | 合规驱动+总分行一体化 |
-| 医疗 | [三甲医院安全案例](Case-Study/examples/Core-system%20security-of-tertial-hospitals.md) | 勒索攻击导致挂号中断2小时 | 业务不中断+防勒索 |
-| 政府 | [政务云安全升级案例](Case-Study/examples/Security%20system%20of%20government%20cloud%20plantform.md) | 80个委办局安全水平参差不齐 | 管理平台+排名通报 |
-| 制造 | [汽车零部件工控安全案例](Case-Study/examples/Safety%20protection%20of%20industrial%20control%20system.md) | PLC被篡改，2000件产品报废 | 旁路部署+IT/OT一体化 |
+| 金融 | [城商行数据合规案例](Case-Study/examples/Bank-data-security-compliance.md) | 监管整改通知，数据分类分级不清 | 合规驱动+总分行一体化 |
+| 医疗 | [三甲医院安全案例](Case-Study/examples/Core-system-security-of-tertial-hospitals.md) | 勒索攻击导致挂号中断2小时 | 业务不中断+防勒索 |
+| 政府 | [政务云安全升级案例](Case-Study/examples/Security-system-of-government-cloud-plantform.md) | 80个委办局安全水平参差不齐 | 管理平台+排名通报 |
+| 制造 | [汽车零部件工控安全案例](Case-Study/examples/Safety-protection-of-industrial-control-system.md) | PLC被篡改，2000件产品报废 | 旁路部署+IT/OT一体化 |
 | 连锁 | [美宜佳MSS案例](Case-Study/examples/sangfor-mss-meiyijia.md) | 3万家门店安全运营 | MSS托管式安全服务 |
 
 ### 案例模板
@@ -55,12 +54,14 @@
 1. 基础信息
 2. 客户背景
 3. 痛点分析（表面诉求→深层痛点→技术需求）
-4. 解决方案
-5. 量化成果
-6. 可复用的面试话术
-7. 个人思考
+4. **我的思考**（痛点推演 → 方案推导过程）
+5. 解决方案
+6. 量化成果
+7. 可复用的面试话术
 
 [案例学习模板](Case-Study/templates/case-study-template.md)
+
+查看案例前建议先读：[Web安全技术与售前场景关联指南](Case-Study/Learning-materials/Web安全技术关联指南.md)
 
 ---
 
@@ -99,16 +100,14 @@
 **训练环境**：基于DVWA + PHP/MySQL，配合Burp Suite与浏览器开发者工具
 **推荐顺序**：反射型XSS → 存储型XSS → DOM型XSS → SQL注入 → CSRF
 
-[Web安全技术与售前场景关联指南](Case-Study/Learning-materials/Web安全技术关联指南.md) — 漏洞原理如何转化为售前话术
-
 ### 合规与安全产品
 
 | 模块 | 内容 | 适合 |
 |------|------|------|
-| [合规与法规](Case-Study/Learning-materials/compliance-and-regulations.md) | 一法三条例、等保体系、行业合规要求 | 了解"为什么客户要买安全" |
-| [安全产品指南](Case-Study/Learning-materials/security-products-guide.md) | 8大核心产品的通俗解释 | 学会"用客户听得懂的话讲产品" |
-| [云安全架构](Case-Study/Learning-materials/cloud-security-and-architecture.md) | 云上三大件、云安全产品、架构设计 | 理解"云上和机房的区别" |
-| [医疗行业产品映射](Case-Study/Learning-materials/Safety%20products%20in%20medical%20industry.md) | 医疗行业攻击面与产品对照 | 理解"怎么给医疗客户配产品" |
+| [合规与法规](Case-Study/Learning-materials/B%20端企业安全需求与法规体系指南.md) | B端企业安全需求全景、一法三条例、等保体系 | 了解"为什么客户要买安全" |
+| [安全产品指南](Case-Study/Learning-materials/安全产品指南.md) | 8大核心产品的通俗解释 | 学会"用客户听得懂的话讲产品" |
+| [云安全架构](Case-Study/Learning-materials/云安全基础%20+%20架构图学习指南.md) | 云上三大件、云安全产品、架构设计 | 理解"云上和机房的区别" |
+| [医疗行业产品映射](Case-Study/Learning-materials/医疗行业安全产品映射手册.md) | 医疗行业攻击面与产品对照 | 理解"怎么给医疗客户配产品" |
 
 ---
 
@@ -125,7 +124,7 @@
 
 ### 学习计划
 
-- [30天速成计划](Case-Study/Learning-materials/30-day-plan.md) — 从零到能独立面对客户
+- [三十天速成计划](Case-Study/Learning-materials/三十天计划.md) — 从零到能独立面对客户
 
 ---
 
@@ -133,7 +132,7 @@
 
 不知道从哪里找真实案例？
 
-[案例资源收集指南](Case-Study/Learning-materials/resourse-guide.md)
+[案例资源收集指南](Case-Study/Learning-materials/案例学习资源汇总.md)
 
 ---
 
@@ -156,24 +155,24 @@
 │   └── DVWA CSRF 渗透测试训练报告.pdf
 └── Case-Study/                     # 售前案例与学习资料
     ├── Learning-materials/         # 基础知识与方法论
-    │   ├── 30-day-plan.md
-    │   ├── compliance-and-regulations.md
-    │   ├── security-products-guide.md
-    │   ├── cloud-security-and-architecture.md
-    │   ├── resourse-guide.md
+    │   ├── B 端企业安全需求与法规体系指南.md
+    │   ├── 安全产品指南.md
+    │   ├── 云安全基础 + 架构图学习指南.md
+    │   ├── 医疗行业安全产品映射手册.md
+    │   ├── 三十天计划.md
+    │   ├── 案例学习资源汇总.md
     │   ├── Web安全技术关联指南.md
-    │   ├── Safety products in medical industry.md
     │   ├── 四维追问框架.md
     │   ├── 场景化询问顺序.md
     │   ├── 案例引用四法.md
     │   └── 售前安全工程师面试题库.pdf
     ├── examples/                   # 行业案例（7个）
-    │   ├── Retail-Company-Attack -Attribution.md
+    │   ├── Retail-company-attack -attribution.md
     │   ├── Online-education-system.md
-    │   ├── Bank data security compliance.md
-    │   ├── Core-system security-of-tertial-hospitals.md
-    │   ├── Security system of government cloud plantform.md
-    │   ├── Safety protection of industrial control system.md
+    │   ├── Bank-data-security-compliance.md
+    │   ├── Core-system-security-of-tertial-hospitals.md
+    │   ├── Safety-protection-of-industrial-control-system.md
+    │   ├── Security-system-of-government-cloud-plantform.md
     │   └── sangfor-mss-meiyijia.md
     └── templates/                  # 案例模板
         └── case-study-template.md
@@ -185,9 +184,9 @@
 
 ```
 第1步：打基础
-  ├─ 读《合规与法规》→ 理解客户为什么要买安全
+  ├─ 读《B端企业安全需求与法规体系指南》→ 理解客户为什么要买安全
   ├─ 读《安全产品指南》→ 学会通俗讲产品
-  ├─ 读《云安全架构》→ 理解云和机房的区别
+  ├─ 读《云安全基础 + 架构图学习指南》→ 理解云和机房的区别
   └─ 练DVWA实战 → XSS/SQL注入/CSRF漏洞原理与防御
 
 第2步：学方法
@@ -217,8 +216,7 @@
 
 | 版本 | 日期 | 更新内容 |
 |------|------|---------|
-| v0.2 | 2026-05 | 新增Web安全基础模块(XSS/SQL注入/CSRF)，修正全部链接 |
-| v0.1 | 2026-05 | 初始版本，包含7个案例 + 3个方法论 + 基础知识 |
+| v0.2 | 2026-05 | 新增Web安全基础模块(XSS/SQL注入/CSRF)，统一文件名，修正全部链接 |
 
 ---
 
