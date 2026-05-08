@@ -16,6 +16,18 @@
 
 ---
 
+### 使用指南
+
+建议按以下顺序阅读：
+
+1. **先看方法论** → [四维追问框架](Case-Study/Learning-materials/四维追问框架.md)（5分钟，建立售前沟通的基本逻辑）
+2. **再看2个代表案例** → [制造业工控安全](Case-Study/examples/Safety-protection-of-industrial-control-system.md) + [医疗防勒索](Case-Study/examples/Core-system-security-of-tertial-hospitals.md)（10分钟，感受实际场景）
+3. **回看基础知识** → [B端企业安全需求与法规体系指南](Case-Study/Learning-materials/B%20端企业安全需求与法规体系指南.md)（30分钟，打底）
+4. **最后练面试** → [面试题库](Case-Study/Learning-materials/售前安全工程师面试题库.pdf) + 各案例的「可复用的面试话术」
+
+时间有限的话，跳过第3步直接练面试话术也可以。
+
+---
 ## 这是什么
 
 这是一个为**网络安全售前工程师**设计的实战学习手册，内容涵盖：
@@ -31,6 +43,24 @@
 > 到Web安全技术的实战演示、再到产品与场景的映射分析，
 > 全部基于公开资料和个人实践经验编写。
 > 每个案例的「我的思考」部分展示了我对行业需求的复盘和推演过程。
+
+---
+
+## 关于我
+
+我是**夏浩然**，正在准备网络安全售前工程师岗位。
+
+这个仓库是我**系统化学习售前能力的完整记录**。
+
+**我认为一个好的售前工程师需要三种能力：**
+1. **听懂客户** → 四维追问框架、场景化询问节奏（方法论）
+2. **讲清方案** → 7个跨行业案例，每个都有痛点→推演→方案→话术（案例）
+3. **懂点技术** → XSS/SQL注入/CSRF实战，能跟客户技术团队对话（Web基础）
+
+**如果你是面试官，建议优先看：**
+- [制造行业案例](Case-Study/examples/Safety-protection-of-industrial-control-system.md) — IT/OT融合场景，最能体现跨域理解力
+- [医疗行业案例](Case-Study/examples/Core-system-security-of-tertial-hospitals.md) — 合规+业务连续性双驱动，售前典型打法
+- [四维追问框架](Case-Study/Learning-materials/四维追问框架.md) — 我自己总结的售前追问方法论
 
 ---
 
