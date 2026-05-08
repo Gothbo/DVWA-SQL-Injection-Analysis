@@ -41,7 +41,7 @@
 
 | 行业 | 案例文件 | 核心场景 |
 |------|---------|---------|
-| **零售** | [零售公司攻击溯源](Case-Study/examples/Retail-company-attack%20-attribution.md) | 设备买了但看不清攻击路径 |
+| **零售** | [零售公司攻击溯源](Case-Study/examples/Retail-company-attack-attribution.md) | 设备买了但看不清攻击路径 |
 | **教育** | [在线教育API数据泄露](Case-Study/examples/Online-education-system.md) | 测试接口没鉴权导致数据泄露 |
 | **金融** | [城商行数据安全合规](Case-Study/examples/Bank-data-security-compliance.md) | 监管整改+数据分类分级 |
 | **医疗** | [三甲医院核心系统安全](Case-Study/examples/Core-system-security-of-tertial-hospitals.md) | 勒索攻击导致业务中断 |
@@ -57,7 +57,7 @@
 |---------|---------|
 | **数据泄露** | [教育API泄露](Case-Study/examples/Online-education-system.md) / [金融数据合规](Case-Study/examples/Bank-data-security-compliance.md) |
 | **勒索攻击** | [医疗勒索案例](Case-Study/examples/Core-system-security-of-tertial-hospitals.md) |
-| **攻击溯源** | [零售攻击溯源](Case-Study/examples/Retail-company-attack%20-attribution.md) |
+| **攻击溯源** | [零售攻击溯源](Case-Study/examples/Retail-company-attack-attribution.md) |
 | **合规整改** | [金融合规](Case-Study/examples/Bank-data-security-compliance.md) / [政务云升级](Case-Study/examples/Security-system-of-government-cloud-plantform.md) |
 | **工控安全** | [制造工控安全](Case-Study/examples/Safety-protection-of-industrial-control-system.md) |
 | **安全运营** | [美宜佳MSS案例](Case-Study/examples/sangfor-mss-meiyijia.md) |
@@ -71,10 +71,10 @@
 
 | 产品 | 出现在哪些案例 |
 |------|--------------|
-| **WAF** | [零售](Case-Study/examples/Retail-company-attack%20-attribution.md) / [教育](Case-Study/examples/Online-education-system.md) / [制造](Case-Study/examples/Safety-protection-of-industrial-control-system.md) / [XSS防护](XSS/README.md) / [SQL注入防护](SQL-Injection/README.md) |
+| **WAF** | [零售](Case-Study/examples/Retail-company-attack%-attribution.md) / [教育](Case-Study/examples/Online-education-system.md) / [制造](Case-Study/examples/Safety-protection-of-industrial-control-system.md) / [XSS防护](XSS/README.md) / [SQL注入防护](SQL-Injection/README.md) |
 | **EDR** | [医疗](Case-Study/examples/Core-system-security-of-tertial-hospitals.md) |
 | **DLP** | [教育](Case-Study/examples/Online-education-system.md) / [金融](Case-Study/examples/Bank-data-security-compliance.md) |
-| **XDR+SIP** | [零售](Case-Study/examples/Retail-company-attack%20-attribution.md) / [教育](Case-Study/examples/Online-education-system.md) |
+| **XDR+SIP** | [零售](Case-Study/examples/Retail-company-attack-attribution.md) / [教育](Case-Study/examples/Online-education-system.md) |
 | **MSS** | [教育](Case-Study/examples/Online-education-system.md) / [金融](Case-Study/examples/Bank-data-security-compliance.md) / [制造](Case-Study/examples/Safety-protection-of-industrial-control-system.md) / [美宜佳](Case-Study/examples/sangfor-mss-meiyijia.md) |
 | **数据库审计** | [金融](Case-Study/examples/Bank-data-security-compliance.md) / [SQL注入防护](SQL-Injection/README.md) |
 | **堡垒机** | [安全产品指南](Case-Study/Learning-materials/安全产品指南.md) |
@@ -87,7 +87,7 @@
 
 | 话术场景 | 跳转 |
 |---------|------|
-| "你在零售行业有什么经验？" | [零售案例](Case-Study/examples/Retail-company-attack%20-attribution.md) |
+| "你在零售行业有什么经验？" | [零售案例](Case-Study/examples/Retail-company-attack-attribution.md) |
 | "你在教育行业有什么经验？" | [教育案例](Case-Study/examples/Online-education-system.md) |
 | "你在金融行业有什么经验？" | [金融案例](Case-Study/examples/Bank-data-security-compliance.md) |
 | "你在医疗行业有什么经验？" | [医疗案例](Case-Study/examples/Core-system-security-of-tertial-hospitals.md) |
