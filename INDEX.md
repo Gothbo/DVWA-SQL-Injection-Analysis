@@ -8,7 +8,7 @@
 
 | 行业 | 案例 | 一句话场景 |
 |------|------|-----------|
-| **零售** | [攻击溯源](Case-Study/examples/Retail-company-attack%20-attribution.md) | 设备买了但看不清攻击路径 |
+| **零售** | [攻击溯源](Case-Study/examples/Retail-company-attack-attribution.md) | 设备买了但看不清攻击路径 |
 | **教育** | [API数据泄露](Case-Study/examples/Online-education-system.md) | 测试接口没鉴权，30万数据泄露 |
 | **金融** | [数据安全合规](Case-Study/examples/Bank-data-security-compliance.md) | 监管整改，数据分类分级不清 |
 | **医疗** | [核心系统安全](Case-Study/examples/Core-system-security-of-tertial-hospitals.md) | 勒索攻击导致挂号中断2小时 |
@@ -24,7 +24,7 @@
 |---------|---------|-----------|
 | **数据泄露/API安全** | [教育](Case-Study/examples/Online-education-system.md) / [金融](Case-Study/examples/Bank-data-security-compliance.md) | [案例引用四法](Case-Study/Learning-materials/案例引用四法.md) |
 | **勒索攻击/防勒索** | [医疗](Case-Study/examples/Core-system-security-of-tertial-hospitals.md) | [场景化询问顺序](Case-Study/Learning-materials/场景化询问顺序.md) |
-| **攻击溯源/应急响应** | [零售](Case-Study/examples/Retail-company-attack%20-attribution.md) | [四维追问框架](Case-Study/Learning-materials/四维追问框架.md) |
+| **攻击溯源/应急响应** | [零售](Case-Study/examples/Retail-company-attack-attribution.md) | [四维追问框架](Case-Study/Learning-materials/四维追问框架.md) |
 | **合规整改（等保/个保法）** | [金融](Case-Study/examples/Bank-data-security-compliance.md) / [政府](Case-Study/examples/Security-system-of-government-cloud-plantform.md) | [B端企业安全需求与法规体系指南](Case-Study/Learning-materials/B%20端企业安全需求与法规体系指南.md) |
 | **工控安全/OT安全** | [制造](Case-Study/examples/Safety-protection-of-industrial-control-system.md) | [安全产品指南](Case-Study/Learning-materials/安全产品指南.md) |
 | **安全运营/MSS托管** | [美宜佳](Case-Study/examples/sangfor-mss-meiyijia.md) | [云安全基础 + 架构图学习指南](Case-Study/Learning-materials/云安全基础%20+%20架构图学习指南.md) |
