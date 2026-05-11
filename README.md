@@ -19,6 +19,7 @@
 | 想找方法论 | [方法论速查](#方法论) |
 | 准备面试 | [面试题库](Case-Study/Learning-materials/售前安全工程师面试题库.pdf) |
 | 想练Web安全实战 | [Web安全基础](#web安全基础dvwa实战) |
+| 想看我完整的知识体系 | [项目结构](#项目结构) |
 
 ### 使用指南
 
@@ -38,9 +39,11 @@
 这是一个为**网络安全售前工程师**设计的实战学习手册，内容涵盖：
 
 - **基础知识**：法规合规指南、安全产品、云安全架构、Web漏洞实战(XSS/SQL注入/CSRF)
-- **方法论**：客户询问技巧、方案匹配逻辑、案例引用方法
-- **案例学习**：覆盖零售、教育、金融、医疗、政府、制造6大行业
+- **方法论**：客户询问技巧、方案匹配逻辑、案例引用方法、金字塔异议回应框架
+- **案例学习**：覆盖零售、教育、金融、医疗、政府、制造、连锁7大行业
 - **行业产品映射**：金融/制造/医疗/政务4大行业的产品映射指南
+- **行业态势感知**：金融/制造/医疗/政务4大行业的态势感知三层架构对比指南
+- **产品策略**：XDR vs SOC/SIP 客户画像匹配指南
 - **面试准备**：题库 + 实战练习
 
 **核心理念**：售前不是卖产品清单，而是帮客户理清问题，再给对应的解法。
@@ -62,11 +65,13 @@
 1. **听懂客户** → 四维追问框架、场景化询问节奏（方法论）
 2. **讲清方案** → 7个跨行业案例，每个都有痛点→推演→方案→话术（案例）
 3. **懂点技术** → XSS/SQL注入/CSRF实战，能跟客户技术团队对话（Web基础）
+4. **能处理异议** → 金字塔回应框架，知道什么该说、什么不该说（售前软技能）
 
 **如果你是面试官，建议优先看：**
 - [制造行业案例](Case-Study/examples/Safety-protection-of-industrial-control-system.md) — IT/OT融合场景，最能体现跨域理解力
 - [医疗行业案例](Case-Study/examples/Core-system-security-of-tertial-hospitals.md) — 合规+业务连续性双驱动，售前典型打法
 - [四维追问框架](Case-Study/Learning-materials/四维追问框架.md) — 我自己总结的售前追问方法论
+- [金字塔回应框架](Case-Study/Learning-materials/售前金字塔回应框架.md) — 客户提出异议时的应对纪律
 
 ---
 
@@ -76,11 +81,11 @@
 
 | 行业 | 案例名称 | 核心问题 | 方案亮点 |
 |------|---------|---------|---------|
-| 零售 | [攻击溯源案例](Case-Study/examples/Retail-company-attack%20-attribution.md) | 设备买了但看不清攻击路径 | 三天出溯源报告 |
+| 零售 | [攻击溯源案例](Case-Study/examples/Retail-company-attack-attribution.md) | 设备买了但看不清攻击路径 | 三天出溯源报告 |
 | 教育 | [API数据泄露案例](Case-Study/examples/Online-education-system.md) | 测试接口没鉴权泄露30万数据 | 先止血再排查 |
 | 金融 | [城商行数据合规案例](Case-Study/examples/Bank-data-security-compliance.md) | 监管整改通知，数据分类分级不清 | 合规驱动+总分行一体化 |
 | 医疗 | [三甲医院安全案例](Case-Study/examples/Core-system-security-of-tertial-hospitals.md) | 勒索攻击导致挂号中断2小时 | 业务不中断+防勒索 |
-| 政府 | [政务云安全升级案例](Case-Study/examples/Security-system-of-government-cloud-plantform.md) | 80个委办局安全水平参差不齐 | 管理平台+排名通报 |
+| 政府 | [政务云安全升级案例](Case-Study/examples/Security-system-of-government-cloud-platform.md) | 80个委办局安全水平参差不齐 | 管理平台+排名通报 |
 | 制造 | [汽车零部件工控安全案例](Case-Study/examples/Safety-protection-of-industrial-control-system.md) | PLC被篡改，2000件产品报废 | 旁路部署+IT/OT一体化 |
 | 连锁 | [美宜佳MSS案例](Case-Study/examples/sangfor-mss-meiyijia.md) | 3万家门店安全运营 | MSS托管式安全服务 |
 
@@ -110,6 +115,7 @@
 | [四维追问框架](Case-Study/Learning-materials/四维追问框架.md) | 环境、时间、资产、预算四个维度的追问逻辑 | 所有售前对话 |
 | [场景化询问顺序](Case-Study/Learning-materials/场景化询问顺序.md) | 危机/常规/探索三种场景的不同询问节奏 | 根据客户状态灵活调整 |
 | [案例引用四法](Case-Study/Learning-materials/案例引用四法.md) | 模糊化、组合用、坦诚查、行业数据 | 讲案例时不编造 |
+| [金字塔回应框架](Case-Study/Learning-materials/售前金字塔回应框架.md) | 异议应对的结构化方法——结论先行、论点按客户决策链排列、收口锁定下一步 | 客户提出价格/功能/竞品异议时 |
 
 ### 售前五步法
 
@@ -144,14 +150,17 @@
 | [安全产品指南](Case-Study/Learning-materials/安全产品指南.md) | 8大核心产品的通俗解释 | 学会"用客户听得懂的话讲产品" |
 | [云安全架构](Case-Study/Learning-materials/云安全基础%20+%20架构图学习指南.md) | 云上三大件、云安全产品、架构设计 | 理解"云上和机房的区别" |
 
-### 行业产品映射指南
+### 行业产品映射与策略指南
 
-| 行业 | 内容 | 适合 |
+| 类型 | 指南 | 适合 |
 |------|------|------|
-| [金融行业](Case-Study/Learning-materials/金融行业安全产品映射手册.md) | 银行安全需求、零信任、数据安全、DevSecOps | 面银行客户前必读 |
-| [制造业](Case-Study/Learning-materials/制造业工控系统安全产品映射手册.md) | IT/OT隔离、微隔离、工控协议安全 | 面制造客户前必读 |
-| [医疗行业](Case-Study/Learning-materials/医疗行业安全产品映射手册.md) | 医疗攻击面、防勒索、等保三级 | 面医院客户前必读 |
-| [政务行业](Case-Study/Learning-materials/政务行业安全产品映射指南.md) | 政务云、等保合规、排名通报战术 | 面政府客户前必读 |
+| **金融行业** | [金融行业安全产品映射手册](Case-Study/Learning-materials/金融行业安全产品映射手册.md) | 面银行客户前必读 |
+| **制造业** | [制造业工控安全产品映射手册](Case-Study/Learning-materials/制造业工控系统安全产品映射手册.md) | 面制造客户前必读 |
+| **医疗行业** | [医疗行业安全产品映射手册](Case-Study/Learning-materials/医疗行业安全产品映射手册.md) | 面医院客户前必读 |
+| **政务行业** | [政务行业安全产品映射指南](Case-Study/Learning-materials/政务行业安全产品映射指南.md) | 面政府客户前必读 |
+| **态势感知（跨行业）** | [各行业态势感知产品指南](Case-Study/Learning-materials/各行业态势感知产品指南.md) | 理解探针-引擎-平台三层架构在不同行业的差异 |
+| **产品组合策略** | [安全产品组合策略指南（XDR vs SOC）](Case-Study/Learning-materials/安全产品组合策略指南（XDR%20vs%20SOC）.md) | 理解XDR/SOC/SIP的产品定位和客户画像匹配 |
+| **敏感度地图** | [各行业方案敏感度地图](Case-Study/Learning-materials/各行业方案敏感度地图.md) | 不同行业对方案中什么最敏感的速查+会中识别法 |
 
 ---
 
@@ -165,6 +174,8 @@
 
 1. **案例演练** — 从7个案例中选一个，用面试话术部分练习表达
 2. **DVWA环境** — 搭建本地环境演示漏洞效果
+3. **方案敏感度识别** — 用[各行业方案敏感度地图](Case-Study/Learning-materials/各行业方案敏感度地图.md)的会中快速识别法练习判断客户方向
+4. **异议处理练习** — 用[金字塔回应框架](Case-Study/Learning-materials/售前金字塔回应框架.md)练习应对客户异议
 
 ### 学习计划
 
@@ -203,6 +214,10 @@
     │   ├── 安全产品指南.md
     │   ├── 云安全基础 + 架构图学习指南.md
     │   ├── 金融/制造业/医疗/政务行业安全产品映射手册.md
+    │   ├── 各行业态势感知产品指南.md              ← 新增
+    │   ├── 安全产品组合策略指南（XDR vs SOC）.md    ← 新增
+    │   ├── 售前金字塔回应框架.md                   ← 新增
+    │   ├── 各行业方案敏感度地图.md                  ← 新增
     │   ├── 三十天计划.md
     │   ├── 案例学习资源汇总.md
     │   ├── Web安全技术关联指南.md
@@ -216,7 +231,7 @@
     │   ├── Bank-data-security-compliance.md
     │   ├── Core-system-security-of-tertial-hospitals.md
     │   ├── Safety-protection-of-industrial-control-system.md
-    │   ├── Security-system-of-government-cloud-plantform.md
+    │   ├── Security-system-of-government-cloud-platform.md
     │   └── sangfor-mss-meiyijia.md
     └── templates/                  # 案例模板
         └── case-study-template.md
@@ -236,7 +251,8 @@
 第2步：学方法
   ├─ 读《四维追问框架》→ 学会问对问题
   ├─ 读《场景化询问顺序》→ 学会灵活调整
-  └─ 读《案例引用四法》→ 学会讲好案例
+  ├─ 读《案例引用四法》→ 学会讲好案例
+  └─ 读《金字塔回应框架》→ 学会应对异议
 
 第3步：看案例
   ├─ 精读2-3个同行业案例
@@ -246,6 +262,7 @@
 第4步：练实战
   ├─ 搭建DVWA环境演示给客户看
   ├─ 模拟面试场景
+  ├─ 用《各行业方案敏感度地图》练习识别客户方向
   └─ 反复打磨表达方式
 
 第5步：去面试
@@ -260,6 +277,7 @@
 
 | 版本 | 日期 | 更新内容 |
 |------|------|---------|
+| v0.4 | 2026-05 | 新增售前方法论体系（金字塔回应框架）、跨行业指南（态势感知+方案敏感度地图+产品组合策略）、更新README/INDEX |
 | v0.3 | 2026-05 | 新增4大行业产品映射指南（金融/制造/医疗/政务），完善基础知识体系 |
 | v0.2 | 2026-05 | 新增Web安全基础模块(XSS/SQL注入/CSRF)，统一文件名，修正全部链接 |
 
