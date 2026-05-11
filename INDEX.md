@@ -12,7 +12,7 @@
 | **教育** | [API数据泄露](Case-Study/examples/Online-education-system.md) | 测试接口没鉴权，30万数据泄露 |
 | **金融** | [数据安全合规](Case-Study/examples/Bank-data-security-compliance.md) | 监管整改，数据分类分级不清 |
 | **医疗** | [核心系统安全](Case-Study/examples/Core-system-security-of-tertial-hospitals.md) | 勒索攻击导致挂号中断2小时 |
-| **政府** | [政务云升级](Case-Study/examples/Security-system-of-government-cloud-plantform.md) | 80个委办局安全水平参差不齐 |
+| **政府** | [政务云升级](Case-Study/examples/Security-system-of-government-cloud-platform.md) | 80个委办局安全水平参差不齐 |
 | **制造** | [工控安全防护](Case-Study/examples/Safety-protection-of-industrial-control-system.md) | PLC被篡改，2000件产品报废 |
 | **连锁** | [MSS安全托管](Case-Study/examples/sangfor-mss-meiyijia.md) | 3万家门店，3人安全团队 |
 
@@ -42,7 +42,7 @@
 | "你在教育行业有什么经验？" | [教育API泄露](Case-Study/examples/Online-education-system.md) |
 | "你在金融行业有什么经验？" | [金融数据合规](Case-Study/examples/Bank-data-security-compliance.md) |
 | "你在医疗行业有什么经验？" | [医疗核心系统安全](Case-Study/examples/Core-system-security-of-tertial-hospitals.md) |
-| "你在政府行业有什么经验？" | [政务云升级](Case-Study/examples/Security-system-of-government-cloud-plantform.md) |
+| "你在政府行业有什么经验？" | [政务云升级](Case-Study/examples/Security-system-of-government-cloud-platform.md) |
 | "你在制造行业有什么经验？" | [制造工控安全](Case-Study/examples/Safety-protection-of-industrial-control-system.md) |
 | "你懂Web安全吗？" | [XSS指南](XSS/README.md) / [SQL注入指南](SQL-Injection/README.md) / [CSRF指南](CSRF/README.md) |
 | "你怎么学习售前的？" | [三十天计划](Case-Study/Learning-materials/三十天计划.md) + [面试题库](Case-Study/Learning-materials/售前安全工程师面试题库.pdf) |
